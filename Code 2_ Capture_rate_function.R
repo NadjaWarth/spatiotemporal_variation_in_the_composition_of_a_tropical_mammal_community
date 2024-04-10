@@ -1,4 +1,26 @@
-#CODE 2
+# -----------------------------------------------------------------------------------------
+# Script Name: Code 2_Capture_rate_function.R
+# Author: Nadja Warth
+
+# Description:
+# This script is pivotal for filtering the camera trapping data to align with the specific 
+# research period from December 16 to April 21. It meticulously crops deployments to ensure
+# that both the start and end dates fall within this designated timeframe. The end date is 
+# determined by the last day the camera was operational, either due to retrieval or the last 
+# captured image in the event of a malfunction. Any observations recorded outside the research 
+# period are systematically excluded. Additionally, the script filters out any deployments 
+# lasting less than 14 days due to their insufficiency for the study's needs.
+#
+# Following the data filtering, the script then embarks on calculating the effort and capture 
+# rates, which are essential metrics for the study.
+#
+# Usage:
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+# - Adjust the parameters of the capture rate function to match the research period (years and timeframes)
+#
+# NOTE: Ensure the dataset prepared by "Code 1_Load and Merge Data" is correctly formatted and accessible.
+# -----------------------------------------------------------------------------------------
 
 ### Load Packages ----
 library(vegan)

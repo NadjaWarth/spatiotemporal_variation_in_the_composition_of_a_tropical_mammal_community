@@ -1,4 +1,25 @@
-#CODE 3
+# -----------------------------------------------------------------------------------------
+# Script Name: CODE 3_Imputation
+# Author: Nadja Warth
+# 
+# Description:
+# This script addresses the challenge of missing data within the camera trapping study, 
+# specifically targeting 25 deployments (8% of our data) that were compromised by camera 
+# failures or insufficient deployment durations across all considered years and locations. 
+# Utilizing the MICE package in R, this script explores three distinct imputation methods 
+# to fill these data gaps: Predictive Mean Matching (PMM), Classification and Regression Trees (CART), 
+# and Random Forests (RF). 
+#
+# The results are then compared with the original data for each considered species using summary statistics, 
+# to evaluate how the different imputation methods effected the data distribution. 
+# In my case Random Forest imputation was selected, as this method yielded the results with the best fit.
+#
+# Usage:
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+#
+# NOTE: Ensure the dataset prepared by "Code 2_Capture_rate_function" is correctly formatted and accessible.
+# -----------------------------------------------------------------------------------------
 
 ### Load packages----
 library(vegan)

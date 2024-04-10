@@ -1,5 +1,20 @@
-#CODE 4
-#prepare Environmental Data 
+# -----------------------------------------------------------------------------------------
+# Script Name: Code 4_Prepare Environmental Variables
+# Author: Nadja Warth
+
+# Description:
+# This script is dedicated to processing and preparing a series of environmental variables 
+# outlined in Table 2 of the accompanying thesis.
+# These variables are selected to portray resource availability, as well as structural 
+# properties of the forest and have been considered to influence habitat quality throughout 
+# several studies.
+#
+# Usage:
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+# - Ensure all source data files are available and properly formatted before execution.
+#
+# -----------------------------------------------------------------------------------------
 
 ### Load packages ----
 library(readxl)

@@ -1,4 +1,32 @@
-#CODE 1 
+# -----------------------------------------------------------------------------------------
+# Script Name: Code 1_Load and Merge Data
+# Author: Nadja Warth
+# 
+# Description:
+# This script is designed to prepare camera trapping data from Wildlife Insights and Agouti
+# for subsequent analysis by merging them into a unified dataset. It begins by loading both 
+# datasets and adjusting their formats to ensure compatibility. A crucial part of this process 
+# involves grouping individual observations from the WildID output into sequences to accurately 
+# represent events where animals trigger multiple recordings within a short time frame. Any 
+# sequence of images taken less than 120 seconds apart is considered a single event, reflecting
+# the dynamic nature of animal movements and interactions at the trapping locations.
+#
+# After successfully merging the datasets, the script further enhances the data quality by 
+# addressing missing values in detection distance, a challenge especially prevalent in data 
+# prior to 2015. It achieves this by calculating and imputing the mean detection distance 
+# for each location based on available data. This step is critical for ensuring the integrity 
+# and usability of the dataset for detailed analysis and insight generation about the wildlife
+# captured in these camera traps. The resulting dataset is then ready for further analysis.
+#
+# Usage:
+# - Ensure both Wildlife Insights and Agouti datasets are available in the specified format.
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+# 
+# Notes: To read the ctdp format of the Agouti data, the camtraptor library is used. 
+# For more Instructions on the ctdp package see: https://wec.wur.nl/r/ctdp/
+# and for Camtraptor: https://github.com/inbo/camtraptor/blob/main/R/read_wi.R
+# -----------------------------------------------------------------------------------------
 
 ### Optional: install devtools and camtraptor ----
 # Analysis Camera trapping data 

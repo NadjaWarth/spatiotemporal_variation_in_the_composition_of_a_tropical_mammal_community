@@ -1,5 +1,42 @@
-#CODE 6
-#Biodiversity composition 
+# -----------------------------------------------------------------------------------------
+# Script Name: Code 6_BD_functions_applied - Bray Curtis
+# Author: Nadja Warth
+# 
+# Description:
+# This script conains the Analysis on how the variation in species composition is distributed in 
+# space and time, and which role deterministic and stochastic processes play.
+# It is integral to addressing key research questions concerning the spatio-temporal distribution 
+# of species composition dissimilarity and the relative influence of deterministic versus stochastic 
+# assembly processes on community structure. The script utilizes the Bray-Curtis index to quantify 
+# beta-diversity, indicating how dissimilarity in species composition varies across spatial and temporal 
+# dimensions. Following methodologies outlined by Khattar et al. (2021) and Legendre (2014).
+# 
+# Sections:
+#
+# 1) Defines functions from Legendre and Khattar to calculate pairwise dissimilarities and partition
+#    the total dissimilarity (Dtotal) into spatial (Dspace), temporal (Dtime), and spatiotemporal (DSpT)
+#    components.
+# 2) Converts data into the appropriate format for analysis.
+# 3) Calculates and plots average beta-diversity across the different dimensions.
+# 4) Tests for significant differences in dissimilarity values among the dimensions and plots these differences.
+# 5) Assesses the role of stochasticity and determinism in community assembly: 
+#    5.a) Generates multiple random community matrices.
+#    5.b) Calculates mean and standard deviation for each row of the null dissimilarities.
+#    5.c) Calculates Standardized Effect Sizes (SES) to compare observed and null model dissimilarities.
+#    5.d) Conducts T-tests to assess significance.
+#    5.e) Produces boxplots of SES values.
+#    5.f) Graphs to compare means of observed dissimilarities against those of the null models.
+# 6) Tests the stochastic and deterministic effects across different years.
+# 7) Tests the stochastic and deterministic effects across different locations.
+#
+# Usage:
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+# - Ensure all source data files are available and properly formatted before execution.
+#
+#  NOTE: Ensure the imputed data prepared by "Code 3_Imputation" are correctly formatted and accessible.
+# -----------------------------------------------------------------------------------------
+
 
 ### Load Packages ----
 library(tidyverse)

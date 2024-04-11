@@ -1,5 +1,41 @@
-#CODE 5
-#ORDINATION ANALYSIS 
+# -----------------------------------------------------------------------------------------
+# Script Name: Code 5 Ordination Analysis
+# Author: Nadja Warth
+# 
+# Description:
+# This script is designed to delve into the deterministic processes influencing wildlife 
+# populations by addressing the third research question of the accompanying thesis: 
+# "Which environmental factors are most important in explaining the spatio-temporal variation?". 
+# 
+# I performed the analysis on three levels. First, I focused on the spatial variation, 
+# by estimating an average capture rate for each species across all years at a given location. 
+# Second, I focused on the temporal variation, by estimating an average capture rate for 
+# each species across all locations, to generate a single mean capture rate per species per year. 
+# Lastly, I performed analysis using the values of all locations and years together.
+# 
+# For all 3 levels I performed indirect and direct gradient analysis, similar to Blake & Loiselle (2018). 
+# First, I performed a detrended correspondence analysis (DCA) to obtain the length of the gradients in 
+# standard deviations. If the length of the first gradient is larger than 4, unimodal models are appropriate, 
+# if the length is smaller than 3, linear models are better suited (Blake & Loiselle, 2018). 
+# Since the length of the gradient was >0.2 in all 3 cases, I chose to use a redundancy analysis as linear 
+# model, to evaluate how much of the variance in the species composition can be linked to the selected 
+# environmental variables. Before performing the RDA, I estimated the variance inflation factor of the variables 
+# to check for multicollinearity and removed variables from the model if necessary.
+# Afterwards I performed backward selection to test which variables are most relevant in improving the model fit 
+# and used those variables in the RDA. 
+# To test the significance of the RDA model and the used variables, I performed ANOVAs. 
+# Additionally, I generated correlation matrixes using the Kendall rank correlation coefficient, 
+# to obtain insights into bivariate relationships between individual species and environmental features. 
+#
+# Usage:
+# - Install and load all required packages
+# - Update the paths to input files and desired output location as needed.
+# - Ensure all source data files are available and properly formatted before execution.
+#
+# NOTE: Ensure the imputed data prepared by "Code 3_Imputation" and the spatial and temporal data 
+#       prepared by "Code4_Prepare environmental variable" are correctly formatted and accessible.
+# -----------------------------------------------------------------------------------------
+
 
 ### Load packages ----
 
